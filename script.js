@@ -29,7 +29,7 @@ document.addEventListener(DOMContentLoaded, function () {
          feedbackDiv.style.color = "#28a745"
        }
        if (isValid == false ) {
-         feedbackDiv.innerHTML = messages + <br>
+         feedbackDiv.innerHTML = message.join('<br>')
          feedbackDiv.style.color = "#dc3545"
        }
 }
