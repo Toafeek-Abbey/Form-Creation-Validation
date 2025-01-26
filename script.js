@@ -13,15 +13,15 @@ document.addEventListener(DOMContentLoaded, function () {
        const messages = []
        if (username.length < 3 ) {
          isValid = false
-         message = ['incorrect username']
+         message.push('incorrect username')
        }
        if (email.includes('@') && email.includes('.')) {
          isValid = false
-         message = ['incorrect email']
+         message.push('incorrect email')
        }
        if (password.length < 8 ) {
          isValid = false
-         message = ['incorrect password']
+         message.push('incorrect password')
        }
        feedbackDiv.style.display = block
        if (isValid == true ) {
