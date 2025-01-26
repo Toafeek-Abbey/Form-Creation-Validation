@@ -13,15 +13,15 @@ document.addEventListener(DOMContentLoaded, function () {
        const messages = []
        if (username.length < 3 ) {
          isValid = false
-         message.push('incorrect username')
+         messages.push('incorrect username')
        }
        if (email.includes('@') && email.includes('.')) {
          isValid = false
-         message.push('incorrect email')
+         messages.push('incorrect email')
        }
        if (password.length < 8 ) {
          isValid = false
-         message.push('incorrect password')
+         messages.push('incorrect password')
        }
        feedbackDiv.style.display = block
        if (isValid == true ) {
@@ -29,7 +29,7 @@ document.addEventListener(DOMContentLoaded, function () {
          feedbackDiv.style.color = "#28a745"
        }
        if (isValid == false ) {
-         feedbackDiv.innerHTML = message.join('<br>')
+         feedbackDiv.innerHTML = messages.join('<br>')
          feedbackDiv.style.color = "#dc3545"
        }
 }
